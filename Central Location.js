@@ -1,11 +1,11 @@
 export default function cityGrid() {
-  const [city, setCity] = useState('Los Angeles');
+  const [city, setCity] = useState('Ontario');
 
-  const [LosAngelesContentVisible, setLosAngelesContentVisible] = useState(false);
+  const [OntarioContentVisible, setOntarioContentVisible] = useState(false);
   const [otherCityContentVisible, setOtherCityContentVisible] = useState(false);
 
   useEffect(() => {
-    city === 'Los Angeles' ? setLosAngelesContentVisible(true) : setLosAnglesContentVisible(false)
+    city === 'Ontario' ? setOntarioContentVisible(true) : setOntarioContentVisible(false)
     city === 'othercity1' ? setOtherCityContentVisible(true) : setOtherCityContentVisible(false)
    ...etc
 }
@@ -17,16 +17,16 @@ return (
   <div>
     <div>
       <select>
-        <option value="Los Angeles" onClick={handleOnChange}/>
-        <option value="othercity1" onClick={handleOnChange}/>
-        <option value="othercity2" onClick={handleOnChange}/>
-        <option value="othercity3" onClick={handleOnChange}/>
+        <option value="Ontario" onClick={handleOnChange}/>
+        <option value="Bramptoncity1" onClick={handleOnChange}/>
+        <option value="Mississaugacity2" onClick={handleOnChange}/>
+        <option value="Torontocity3" onClick={handleOnChange}/>
       <select>
     </div>
     <div>
-      {LosAngelesContentVisible &&
+      {OntarioContentVisible &&
         <div>
-          <ReactComponentWithApiData city={"Los Angeles"} />
+          <ReactComponentWithApiData city={"Ontario"} />
         </div>
       }
       {othercityContentVisible &&
